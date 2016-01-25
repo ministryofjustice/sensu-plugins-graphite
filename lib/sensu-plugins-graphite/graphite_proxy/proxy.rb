@@ -94,7 +94,7 @@ module SensuPluginsGraphite
             handle = open(url, request_auth_options(config))
 
             @raw_data = handle.gets
-            if @raw_data == '[]'
+            if @raw_data == '[]' && config[:nodata] != true
               unknown 'Empty data received from Graphite - metric probably doesn\'t exists'
             else
               json_data = JSON.parse(@raw_data)

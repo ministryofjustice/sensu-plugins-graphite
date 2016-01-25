@@ -87,6 +87,13 @@ module SensuPluginsGraphite
             default: '-10mins'
           },
 
+          nodata: {
+            description: 'If no data exist for timerange, treat as OK.',
+            short: '-0'
+            long: '--zero'
+            default: false
+          },
+
           warning: {
             description: 'Generate warning if number of hosts is below received value',
             short: '-w VALUE',
