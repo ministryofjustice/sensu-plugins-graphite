@@ -89,8 +89,8 @@ module SensuPluginsGraphite
 
           nodata: {
             description: 'If no data exist for timerange, treat as OK.',
-            short: '-0'
-            long: '--zero'
+            short: '-0',
+            long: '--zero',
             default: false
           },
 
